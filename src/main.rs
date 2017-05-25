@@ -1,12 +1,11 @@
+extern crate libbpf;
 extern crate clap;
 #[macro_use]
 extern crate error_chain;
-extern crate bpf_map;
 
 use std::io::Write;
 use clap::{Arg, ArgMatches, App, AppSettings, SubCommand};
-
-use bpf_map::Map;
+use libbpf::Map;
 
 error_chain! {
     foreign_links {
